@@ -1,0 +1,24 @@
+<li class="article-wrapper">
+	<%= link_to (article) do %>
+	<ul id="tags">
+		<% article.tags.each do |tag| %>
+			<%= content_tag :li, :class => (tag.name) do %><% end %>
+		<% end %>
+	</ul>
+	<ul id="tagsText">
+		<% article.tags.each do |tag| %>
+			<%= content_tag :li, :class => "tags-text" do %>
+				<%= tag.name %>
+			<% end %>
+		<% end %>
+	</ul>
+	<div class="info-side">
+		<h1><%= article.title %></h1>
+		<p class="date"><%= article.created_at.strftime("%d %b. %Y") %></p>
+	</div>
+	<div class="pic-side">
+		<%= image_tag article.image.url %>
+	</div>
+	<div class="clear-me"></div>
+	<% end %>
+</li>

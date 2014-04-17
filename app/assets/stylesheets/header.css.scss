@@ -1,0 +1,78 @@
+$ruby: red;
+$magic: orange;
+$korea: blue;
+$huskers: black;
+$gaming: green;
+$gray: #777;
+
+div.wrapper{
+	width: 100%;
+	border-bottom: 1px solid #eaeaea;
+
+	background-color: rgba(255, 255, 255, 0.9);
+
+	header {
+		max-width: 900px auto;
+
+		ul{
+			text-align: center;
+
+			li{
+				display: inline-block;
+				padding: 15px;
+				border-bottom: 6px solid #333;
+				border-top: 2px solid transparent;
+
+				color: $gray;
+				text-transform: lowercase;
+
+				&.rails{
+					border-bottom: 6px solid $ruby;
+				}
+
+				&.magic{
+					border-bottom: 6px solid $magic;
+				}
+
+				&.korea{
+					border-bottom: 6px solid $korea;
+				}
+
+				&.huskers{
+					border-bottom: 6px solid $huskers;
+				}
+
+				&.gaming{
+					border-bottom: 6px solid $gaming;
+				}
+
+				&.rails:hover{
+					border-top: 2px solid $ruby;
+				}
+
+				&.magic:hover{
+					border-top: 2px solid $magic;
+				}
+
+				&.korea:hover{
+					border-top: 2px solid $korea;
+				}
+
+				&.huskers:hover{
+					border-top: 2px solid $huskers;
+				}
+
+				&.gaming:hover{
+					border-top: 2px solid $gaming;
+				}
+
+				&:hover{
+					border-top: 2px solid #333;
+
+					color: #333;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

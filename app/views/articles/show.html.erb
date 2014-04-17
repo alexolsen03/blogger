@@ -1,26 +1,29 @@
-<h1 class="article-title"><%= @article.title %></h1>
-<p>
-	Tags:
-	<% @article.tags.each do |tag| %>
-		<%= link_to tag.name, tag_path(tag) %>
-	<% end %>
-</p>
-<% if @article.image.exists? %>
-      <p><%= image_tag @article.image.url %></p>
- <% end %>
+<div class="article-content">
+	<h1 class="article-title"><%= @article.title %></h1>
+	<p class="date"><%= @article.created_at.strftime("%d %b. %Y") %></p>
+	<p class="tags">
+		<% @article.tags.each do |tag| %>
+			<%= link_to tag.name, tag_path(tag) %>
+		<% end %>
+	</p>
+	<% if @article.image.exists? %>
+	      <div class="article-image-container">
+	      	<%= image_tag @article.image.url %>
+	      </div>
+	 <% end %>
 
-<p class="article-body"><%= @article.body %></p>
-<h3>Comments (<%= @article.comments.size %>)</h3>
-<%= render partial: 'articles/comment', collection: @article.comments %>
-
-<%= render partial: 'comments/form' %>
-
+	<p class="article-body">
+		<%= @article.body %>
+	</p>
+</div>
+<div class="comment-wrapper">
+	<h3>Comments (<%= @article.comments.size %>)</h3>
+	
+	<%= render partial: 'articles/comment', collection: @article.comments %>
+	<%= render partial: 'comments/form' %>
+</div>
 <%= link_to "<< Back to Articles List", articles_path %>
-
 <% if logged_in? %>
-
-<%= link_to "edit", edit_article_path(@article) %>
-
-<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
-
+	<%= link_to "edit", edit_article_path(@article) %>
+	<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
 <% end %>

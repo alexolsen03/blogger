@@ -18,6 +18,14 @@
    License: none (public domain)
 */
 
+
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,6 +53,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-image: url('/assets/green_cup.png');
 }
 ol, ul {
 	list-style: none;
@@ -63,8 +72,8 @@ table {
 }
 
 body{
-	background-color: #1b1b24;
-	color: #7a7a8a;
+/*	background-color: #1b1b24;
+	color: #7a7a8a;*/
 }
 
 textarea, input { outline: none; }
@@ -83,4 +92,13 @@ h1, h2{
 
 .go-left{
 	float: left;
+}
+
+div#wrapper{
+	width: 100%;
+}
+
+div#content{
+	margin: 0px auto;
+	width: 800px;
 }

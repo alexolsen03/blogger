@@ -1,0 +1,113 @@
+$ruby: red;
+$magic: orange;
+$korea: blue;
+$huskers: black;
+$gaming: green;
+$gray: #777;
+$fontColor: #19763E;
+$fontHover: #53bf6b;
+$bg: rgba(255,255,255,0.8);
+
+
+ul#articles{
+
+	li.article-wrapper{
+		margin: 80px auto;
+		position: relative;
+		width: 600px;
+
+		background-color: $bg;
+		color: $fontColor;
+
+		a, a:visited{
+			color: $fontColor;
+
+			&:hover{
+				color: $fontHover;
+			}
+
+		}
+
+		div.info-side,
+		div.pic-side{
+			height: 250px;
+			float: left;
+		}
+
+		div.info-side{
+			width: 200px;
+			padding: 14px 8px;
+
+			font-family: 'Open Sans', sans-serif;
+
+			h1{
+				font-size: 18pt;
+			}
+
+			p.date{
+				padding: 12px 0px;
+				color: $gray;
+			}
+
+		}
+
+		div.pic-side{
+			width: 400px;
+			overflow: hidden;
+		}
+
+		ul#tags{
+			position: absolute;
+			top: -7px;
+			left: 0px;
+
+			li{
+				width: 40px;
+				height: 15px;
+				float: left;
+
+				overflow: hidden;
+				background-color: #333;
+
+				&.rails{
+					background-color: $ruby;
+				}
+
+				&.magic{
+					background-color: $magic;
+				}
+
+				&.korea{
+					background-color: $korea;
+				}
+
+				&.huskers{
+					background-color: $huskers;
+				}
+
+				&.gaming{
+					background-color: $gaming;
+				}
+
+			}
+
+		}
+
+		ul#tagsText{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 200px;
+			padding: 8px 14px;
+
+			li{
+				margin: 0px 2px;
+				display:inline-block;
+
+				color: $gray;
+				font-size: 8pt;
+			}
+		}
+
+	}
+}
