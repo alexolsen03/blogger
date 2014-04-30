@@ -1,8 +1,8 @@
-$ruby: red;
-$magic: orange;
-$korea: blue;
-$huskers: black;
-$gaming: green;
+$ruby: #F0D8A8;
+$magic: #3D1C00;
+$korea: #86B8B1;
+$huskers: #F2D694;
+$gaming: #FA2A00;
 $gray: #777;
 
 div.wrapper{
@@ -12,38 +12,40 @@ div.wrapper{
 	background-color: rgba(255, 255, 255, 0.9);
 
 	header {
-		max-width: 900px auto;
+		max-width: 800px;
+		margin: 0px auto;
+		position: relative;
 
 		ul{
 			text-align: center;
 
 			li{
 				display: inline-block;
-				padding: 15px;
-				border-bottom: 6px solid #333;
+				padding: 8px 20px;
+				border-bottom: 3px solid #333;
 				border-top: 2px solid transparent;
 
 				color: $gray;
 				text-transform: lowercase;
 
 				&.rails{
-					border-bottom: 6px solid $ruby;
+					border-bottom-color: $ruby;
 				}
 
 				&.magic{
-					border-bottom: 6px solid $magic;
+					border-bottom-color: $magic;
 				}
 
 				&.korea{
-					border-bottom: 6px solid $korea;
+					border-bottom-color: $korea;
 				}
 
 				&.huskers{
-					border-bottom: 6px solid $huskers;
+					border-bottom-color: $huskers;
 				}
 
 				&.gaming{
-					border-bottom: 6px solid $gaming;
+					border-bottom-color: $gaming;
 				}
 
 				&.rails:hover{
@@ -71,6 +73,27 @@ div.wrapper{
 
 					color: #333;
 					cursor: pointer;
+				}
+			}
+		}
+
+		div.logo{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			a{
+				text-decoration: none;
+
+				h1{
+					padding: 8px 15px;
+
+					background-color: rgba(0,0,0,0.6);
+					font-size: 22px;
+					font-family: 'Russo One', sans-serif;
+					color: #fff;
+					cursor: pointer;
+					letter-spacing: 1px;
 				}
 			}
 		}

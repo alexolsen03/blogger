@@ -6,6 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <p class="flash">
@@ -13,6 +14,9 @@
   </p>
   <div class="wrapper">
     <header>
+      <div class="logo">
+        <%= link_to "<h1>AO</h1>".html_safe, articles_path %>
+      </div>
       <ul>
         <%= render Tag.all %>
       </ul>

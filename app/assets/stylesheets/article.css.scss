@@ -1,8 +1,8 @@
-$ruby: red;
-$magic: orange;
-$korea: blue;
-$huskers: black;
-$gaming: green;
+$ruby: #F0D8A8;
+$magic: #3D1C00;
+$korea: #86B8B1;
+$huskers: #F2D694;
+$gaming: #FA2A00;
 $gray: #777;
 $fontColor: #19763E;
 $fontHover: #53bf6b;
@@ -58,12 +58,12 @@ ul#articles{
 
 		ul#tags{
 			position: absolute;
-			top: -7px;
+			top: -3px;
 			left: 0px;
 
 			li{
 				width: 40px;
-				height: 15px;
+				height: 3px;
 				float: left;
 
 				overflow: hidden;
