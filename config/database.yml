@@ -23,3 +23,5 @@ production:
   database: db/production.postgresql
   pool: 5
   timeout: 5000
+  username: postgres
+  password: code*03
