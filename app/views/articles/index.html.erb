@@ -1,7 +1,6 @@
-<ul id="articles">
-	<%= render Article.all %>
-</ul>
-
 <% if logged_in? %>
 	<%= link_to "Create a New Article", new_article_path, class: "new-article-link" %>
 <% end %>
+<ul id="articles">
+	<%= render Article.all %>
+</ul>

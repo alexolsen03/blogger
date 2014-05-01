@@ -5,6 +5,7 @@ Blogger::Application.routes.draw do
   resources :tags
   resources :authors
   resources :author_sessions, only: [:new, :create, :destroy]
+  resources :comments
 
   root to: 'articles#index'
 

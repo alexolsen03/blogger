@@ -2,4 +2,7 @@
 	<h4><%= comment.author_name %> says</h4><br />
 	<p class="comment-body"><%= comment.body %></p>
 	<p class="comment-date">Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p>
+	<% if logged_in? %>
+		<%= button_to "delete", comment, :method => :delete, :class=>"destroy" %>
+	<% end %>
 </div>
