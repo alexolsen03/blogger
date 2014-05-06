@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'foundation-rails'
 gem 'font-awesome-sass'
 gem "paperclip"
 gem "sorcery"

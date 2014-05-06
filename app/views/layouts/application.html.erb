@@ -1,37 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Blogger</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
-  <div class="wrapper">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
     <header>
-      <ul>
-        <%= render Tag.all %>
-      </ul>
+      <img src="/assets/landscape-wallpaperv1.jpg" />
+      <div id="logo">
+        <h1>Alex Olsen</h1>
+        <h2><span class="color1">Blog</span> / <span class="color2">Portfolio</span> / <span class="color3">Resume</span></h2>
+      </div>
+      <nav>
+        <div id="currentPage">
+          <h1>Blog</h1>
+          <span id="navArrow">
+            <i class="fa-chevron-circle-left fa"></i>
+            <i class="fa-chevron-circle-down fa"></i>
+          </span>
+          <ul>
+            <li>Blog</li>
+            <li>Portfolio</li>
+            <li>Resume</li>
+          </ul>
+        </div>
+      </nav>
     </header>
-  </div>
-  <div id="container">
-    
-    <div id="content">
-      <%= yield %>
-      <hr>
-      <h6>
-        <% if logged_in? %>
-          <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path %>
-        <% else %>
-          <%= link_to "(login)", login_path %>
-        <% end %>
-      </h6>
+    <div id="skillsWrapper">
+      <ul class="skills">
+        <li class="skill1 level3">Oracle ADF</li>
+        <li class="skill2 level1">PLSQL</li>
+        <li class="skill3 level2">HTML5</li>
+        <li class="skill4 level2">JQuery</li>
+      </ul>
+      <ul class="skills">
+        <li class="skill5 level3">Java</li>
+        <li class="skill6 level2">Rails</li>
+        <li class="skill7 level3">CSS</li>
+        <li class="skill8 level1">Foundation</li>
+      </ul>
     </div>
-  </div>
-</body>
+    <div id="projectsWrapper" >
+      <div class="project-wrapper">
+        <div class="band">
+          <h1>View Details</h1>
+          <i class="fa-arrow-circle-o-right fa fa-2x color1"></i>
+          <div class="clear-me"></div>
+        </div>
+        <img src="/assets/blogger.png"/>
+        <div class="project-name">
+          <h1>Blogger</h1>
+        </div>
+      </div>
+      <div class="project-wrapper">
+      <div class="band">
+          <h1>View Details</h1>
+          <i class="fa-arrow-circle-o-right fa fa-2x color1"></i>
+          <div class="clear-me"></div>
+        </div>
+        <img src="/assets/headcam.png"/>
+        <div class="project-name">
+          <h1>Headcam</h1>
+        </div>
+      </div>
+      <div class="project-wrapper">
+        <div class="band">
+          <h1>View Details</h1>
+          <i class="fa-arrow-circle-o-right fa fa-2x color1"></i>
+          <div class="clear-me"></div>
+        </div>
+        <img src="/assets/flashkard.png"/>
+        <div class="project-name">
+          <h1>Flashkard</h1>
+        </div>
+      </div>
+      <div class="project-wrapper">
+        <div class="band">
+          <h1>View Details</h1>
+          <i class="fa-arrow-circle-o-right fa fa-2x color1"></i>
+          <div class="clear-me"></div>
+        </div>
+        <img src="/assets/bakpagi.png"/>
+        <div class="project-name">
+          <h1>Bakpagi</h1>
+        </div>
+      </div>
+    </div>
+<!--     <%= yield %> -->
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
